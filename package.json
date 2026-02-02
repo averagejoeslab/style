@@ -1,0 +1,48 @@
+{
+  "name": "@puppuccino/style",
+  "version": "1.0.0",
+  "description": "Terminal styling library with padding, margins, borders, and alignment",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "style",
+    "terminal",
+    "tui",
+    "cli",
+    "layout",
+    "padding",
+    "borders"
+  ],
+  "author": "Average Joe's Lab",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/averagejoeslab/style.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
